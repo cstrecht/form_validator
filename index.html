@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form Validator</title>
+  </head>
+  <body>
+    <div class="center-form">
+      <h1>Welcome!</h1>
+      <!--  👇🏻 inicio do formulario -->
+      <form method="post" action="login.php" class="b7validator">
+        <div class="txt_field">
+          <input type="text" data-rules="required|min=2" />
+          <span></span>
+          <label class="label">Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="email" data-rules="required" />
+          <span></span>
+          <label class="label">E-mail</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" id="pwd" data-rules="required" />
+          <span></span>
+          <!-- 👆🏻 linha azul -->
+          <label class="label">Password</label>
+        </div>
+        <div class="bottom" style="font-size: 12px">
+          <input type="checkbox" onclick="showPassword()" name="see-password" />
+          <label for="see-password">Show password</label>
+        </div>
+        <div class="bottom" style="font-size: 12px">
+          <a href="#">I forgot my password*</a>
+        </div>
+        <div class="bottom" style="font-size: 12px">
+          <input type="checkbox" name="terms" id="terms" required />
+          <label class="checkbox" for="terms"
+            >I have read and agreed with the
+            <a href="#">Terms and Conditions</a>
+          </label>
+        </div>
+        <input type="submit" value="Sign In" />
+        <div class="signup_link">Not a member? <a href="#">Sign Up</a></div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
